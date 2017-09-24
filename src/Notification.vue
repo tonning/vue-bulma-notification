@@ -21,21 +21,17 @@
 
         methods: {
             close() {
-                if (! this.remember) {
-                    return this.isHiddenLocalState = true
-                }
+                if (this.remember) {
+                    localStorage.setItem('vue-bulma-notifications', JSON.stringify(true))
+                }                
 
-                localStorage.setItem('vue-bulma-notifications', JSON.stringify(true));
+                return this.isHiddenLocalState = true
             },
 
             getState() {
-                if (! this.remember) {
-                    return this.isHiddenLocalState
-                }
+                const savedState = localStorage.getItem('vue-bulma-notifications')
 
-                const savedState = localStorage.getItem('vue-bulma-notifications');
-
-                return savedState ? JSON.parse(savedState) : false;
+                return (savedState && this.remember) ? JSON.parse(savedState) : this.isHiddenLocalState
             }
         },
 
