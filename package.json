@@ -1,6 +1,6 @@
 {
   "name": "vue-bulma-notifications",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "A vue.js and Bulma specific package to display notifications.",
   "main": "src/Notification.vue",
   "scripts": {
