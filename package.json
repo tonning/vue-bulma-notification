@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tonning/vue-bulma-notification.git"
+    "url": "https://github.com/tonning/vue-bulma-notifications.git"
   },
   "keywords": [
     "vue",
